@@ -20,6 +20,7 @@ let tags = {
   'rpgabsen': 'MENU RPGABSEN',
   'owner': 'MENU OWNER',
   'ai': 'MENU AI',
+  'cai': 'MENU CHARACTERS-AI',
   'downloader': 'MENU DOWNLOADER',
   'sticker': 'MENU CONVERT',
   'fun': 'MENU FUN',

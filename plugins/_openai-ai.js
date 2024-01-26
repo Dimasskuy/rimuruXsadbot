@@ -22,7 +22,7 @@ async function sendWebhookMessage(senderId, messageContent, reply) {
     const response = await axios.get(artikelurl);
     const $ = cheerio.load(response.data);
 
-    const articles = $('.compText').slice(0, 3).map((_, element) => $(element).text().trim()).get();
+    const articles = $('.compText').slice(0, 9).map((_, element) => $(element).text().trim()).get();
     const googleArticles = articles.join('\n');
 
     const riki = "chatbot v" + Date.now() + new Date().toISOString() + Math.random().toString().substr(2);
@@ -70,7 +70,7 @@ async function sendWebhookMessage(senderId, messageContent, reply) {
             sendReplyMessages(replyMessages, 0);
           }, 1000); // Jeda 1 detik sebelum mengirim pesan pertama
         } else {
-          reply(`*Rimuru-Bot 2023*\n\n*•*_${replyMessage}_\n\n\n *© RimuruBot Gpt3.2 Azure Microsoft*`);
+          reply(`*Rimuru-Bot 2023*\n\n*•*_${replyMessage}_\n\n\n *© RimuruBot Gpt3.4 Azure Microsoft*`);
         }
 
         function sendReplyMessages(messages, index) {
